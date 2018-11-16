@@ -1,6 +1,7 @@
 # Random Game of Thrones Quotes Machine
 
-This is my solution to a freecodecamps.org Front End Libraries Project - Build a Random Quote Machine
+This is my solution to a freecodecamps.org Front End Libraries Project - Build a Random Quote Machine.
+<a href="https://j-v-a.github.io/got-random-quotes/">See live!</a>
 
 ## The requirements:
 
