@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css?family=Cinzel+Decorative:400,900");
+@import url("https://fonts.googleapis.com/css?family=Cinzel");
+
+@import 'quoteComponent';
+
+body {
+  margin: 0;
+
+  #app {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Cinzel Decorative", cursive;
+    background-image: url("https://www.hbo.com/content/dam/hbodata/series/game-of-thrones/episodes/6/game-of-thrones-6-3000x1688.jpg");
+    background-size: 100%;
+    background-position: center;
+  }
+}

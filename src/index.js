@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const title = 'My Minimal React Webpack Babel Setup';
+import './stylesheets/main.scss';
 
-ReactDOM.render(
-  <div>{title}</div>,
-  document.getElementById('app')
-);
+import QuoteComponent from './components/QuoteComponent';
+
+const title = 'GOT Random quote Machine';
+
+ReactDOM.render(<QuoteComponent />, document.getElementById('app'));
 
 module.hot.accept();
