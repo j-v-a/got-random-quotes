@@ -5,6 +5,8 @@ const htmlWebpackPlugin = new HtmlWebpackPlugin({
   template: path.join(__dirname, 'src/index.html'),
   filename: './index.html'
 });
+const PACKAGE = require('./package.json');
+const homepage = PACKAGE.homepage;
 
 module.exports = {
   entry: path.join(__dirname, 'src/index.js'),
@@ -36,7 +38,7 @@ module.exports = {
   },
   output: {
     path: path.join(__dirname, 'dist'),
-    publicPath: '/',
+    publicPath: homepage,
     filename: 'bundle.js'
   },
   plugins: [htmlWebpackPlugin, new webpack.HotModuleReplacementPlugin()],
