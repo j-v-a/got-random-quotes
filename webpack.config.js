@@ -1,7 +1,13 @@
 const webpack = require('webpack');
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const htmlWebpackPlugin = new HtmlWebpackPlugin({
+  template: path.join(__dirname, 'src/index.html'),
+  filename: './index.html'
+});
 
 module.exports = {
-  entry: './src/index.js',
+  entry: path.join(__dirname, 'src/index.js'),
   module: {
     rules: [
       {
@@ -22,18 +28,18 @@ module.exports = {
             loader: 'sass-loader'
           }
         ]
-      }    
+      }
     ]
   },
   resolve: {
     extensions: ['*', '.js', '.jsx']
   },
   output: {
-    path: __dirname + '/dist',
+    path: path.join(__dirname, 'dist'),
     publicPath: '/',
     filename: 'bundle.js'
   },
-  plugins: [new webpack.HotModuleReplacementPlugin()],
+  plugins: [htmlWebpackPlugin, new webpack.HotModuleReplacementPlugin()],
   devServer: {
     contentBase: './dist',
     hot: true
